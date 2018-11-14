@@ -1,33 +1,2 @@
-# Exercise L-1.1
-# 1: init
-N = 10
-A = fix(rand(N,N) * 10)
-B = round(randn(N,N) * 10)
-
-#plot(A)
-
-# 2: min/max of each matrix
-amin = min(min(A))
-amax = max(max(A))
-bmin = min(min(B))
-bmax = max(max(B))
-
-# 3: frequency of each matrix element
-a = [];
-for i = amin:amax
- tmp = length(find(A == i));
- a = [a tmp];
-endfor
-a
-
-b = [];
-for i = bmin:bmax
- tmp = length(find(B == i));
- b = [b tmp];
-endfor
-b
-
-# 4: plot frequency distribution
-plot(a)
-
-plot(b)
+# Pattern Recognition - Laboratory# Petersen, Engelmann, Steeg# Exercise L-1.1# a: initN = 10A = fix(rand(N,N) * 10)B = round(randn(N,N) * 10)# b: min/max of each matrixamin = min(min(A))amax = max(max(A))bmin = min(min(B))bmax = max(max(B))# c: frequency of each matrix elementa = [];for i = amin:amax tmp = length(find(A == i)); a = [a tmp];
+endforab = [];for i = bmin:bmax tmp = length(find(B == i)); b = [b tmp];endforb# d.1: plot frequency distribution (a)figure(1);title("distribution of A");bar(a);xlabel("A");ylabel("counts of A");% e: plotting mean of ahold online([1:length(a)],ones(1,length(a))*mean(a));hold offishold# d.2: plot frequency distribution (b)figure(2);title("distribution of B");bar(b);xlabel("B");ylabel("counts of B");
