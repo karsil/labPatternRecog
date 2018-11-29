@@ -2,6 +2,8 @@ clc
 clear all
 close all
 
+%task c:
+
 %load("digit3.mat")
 %hist(D(:,297),length(unique(D)))
 %figure(1)
@@ -10,8 +12,9 @@ close all
 %tempImage = reshape(tempImage(1,:),[28,28]);
 %figure(2),imshow(tempImage',[]);
 
+%task d:
 function displayPixel(pixelPositions)
-  load("digit3.mat")
+  load("materials/digit3.mat")
   figureNumber=1;
   for i=pixelPositions
     figure(figureNumber),hist(D(:,i),length(unique(D)))
@@ -24,7 +27,7 @@ function displayPixel(pixelPositions)
 end
 
 %hier muss noch einer "interessante" stellen raussuchen ^^
-displayPixel([297,297,297,297,297,297,297])
+displayPixel([297,150,297,297,297,297,297])
 
 
 

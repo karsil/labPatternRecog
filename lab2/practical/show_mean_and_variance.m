@@ -2,12 +2,13 @@ clc
 clear all
 close all
 
+%Task b
 function show_data()
-    for i=0:1:9
-      load(strcat("digit",int2str(i),".mat"));
-   generateMeanAndVarianceImage(D);
-      pause(0.1);
-    end
+  for i=3:3
+    load(strcat("materials/digit",int2str(i),".mat"));
+    generateMeanAndVarianceImage(D);
+    pause(0.1);
+  end
 end
 
 function generateMeanAndVarianceImage(D)
