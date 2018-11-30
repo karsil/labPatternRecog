@@ -17,18 +17,16 @@ function displayPixel(pixelPositions)
   load("materials/digit3.mat")
   figureNumber=1;
   for i=pixelPositions
-    figure(figureNumber),hist(D(:,i),length(unique(D)))
+    figure(figureNumber+1),hist(D(:,i),length(unique(D)))
     tempImage = 0*D;
     tempImage(:, i) = tempImage(:,i)+255;
     tempImage = reshape(tempImage(1,:),[28,28]);
-    figure(figureNumber+1),imshow(tempImage',[]);
+    figure(figureNumber),imshow(tempImage',[]);
     figureNumber=figureNumber+2;
   end
 end
 
 %hier muss noch einer "interessante" stellen raussuchen ^^
-displayPixel([297,150,297,297,297,297,297])
-
-
+displayPixel([297,126,151,178,348,404,467,523,577,603,658])
 
 
