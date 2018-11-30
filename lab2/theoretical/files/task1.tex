@@ -23,7 +23,5 @@ P(A|B)=  \frac{P(A \cap B)}{P(B)} \nonumber
 	&= \frac{P(F) - P(F \cap E)}{1 - P(E)} \nonumber \\
 	&= \frac{P( \{v_1\} \cup \{v_3\} ) - P(( \{v_1\} \cup \{v_3\} ) \cap (\{v_1\} \cup \{v_2\}))}{1 - P(\{v_1\} \cup \{v_2\})} \nonumber \\
 	&= \frac{P( \{v_3\} ) - P(\{v_2\} \cup \{v_3\})}{1 - P(\{v_1\} \cup \{v_2\})} \nonumber \\
-	&= \frac{P(v_3) - (P(v_2)+ P(v_3))}{1-(p(v_1)+p(v_2))}\nonumber\\
+	&= \frac{P(v_3) - P(v_2) - P(v_3)}{1-(P(v_1)+P(v_2))}\nonumber
 \end{align}
-%Anderer Loesungsansatz:
-%$ = \frac{P(E^c|F)\cdot P(F)}{P(E^c)}$
