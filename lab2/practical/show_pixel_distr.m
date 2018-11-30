@@ -23,7 +23,6 @@ function displayPixel(pixelPositions)
   end
 end
 
-# show *interesting* pixel positions
 displayPixel([297,126,151,178,348,404,467,523,577,603,658])
 
 

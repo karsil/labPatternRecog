@@ -23,13 +23,5 @@ function show_joint_prob(min,max,digitValue)
   
 end
 
-%Task f
-function show_joint_prob2(min,max,value)
-  load(strcat("materials/digit",int2str(value),".mat"));
-  A = D >= min & D < max;
-  plot(sum(A));
-end
 
 show_joint_prob(250,255,3)
-
-%show_joint_prob(100,100,3)
