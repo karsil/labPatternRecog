@@ -2,6 +2,8 @@
 # Petersen, Engelmann, Steeg
 # Exercise L-2.1
 
+%We know this is not the solution but we are unsure how to do it.
+
 clc
 clear all
 close all
