@@ -1,3 +1,7 @@
+# Pattern Recognition - Laboratory
+# Petersen, Engelmann, Steeg
+# Exercise L-2.1
+
 clc
 clear all
 close all
@@ -16,6 +20,6 @@ function show_data(im_num)
     end
 end
 
-show_data(1)
+show_data(2)
 
 

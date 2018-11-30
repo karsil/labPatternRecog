@@ -1,3 +1,7 @@
+# Pattern Recognition - Laboratory
+# Petersen, Engelmann, Steeg
+# Exercise L-2.1
+
 clc
 clear all
 close all
