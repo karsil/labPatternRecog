@@ -8,7 +8,7 @@ close all
 
 %Task b
 function show_data()
-  for i=3:3
+  for i=0:9
     load(strcat("materials/digit",int2str(i),".mat"));
     generateMeanAndVarianceImage(D);
     pause(0.1);

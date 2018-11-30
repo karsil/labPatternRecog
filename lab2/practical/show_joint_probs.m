@@ -14,10 +14,13 @@ function show_joint_prob(min,max,digitValue)
   for i = 1:size(D,1)
     I = D(i,:);
     I = reshape(I,[28,28]);
-    matrix=matrix+I;
+    A = I >= min & I < max;
+    matrix = matrix + A;
     k=k+1;
   end
   matrix = matrix/k;
+  figure(1),imshow(matrix',[]);
+  
 end
 
 %Task f
@@ -27,6 +30,6 @@ function show_joint_prob2(min,max,value)
   plot(sum(A));
 end
 
-show_joint_prob2(50,150,3)
+show_joint_prob(250,255,3)
 
 %show_joint_prob(100,100,3)
