@@ -10,4 +10,18 @@ The Census Bureau has estimated the following survival probabilities for men:
 What is the conditional probability that a man lives at least 80 years given that he has just celebrated his 70th birthday?
 
 \subsection*{Solution}
-An answer.
+
+Given probabilities:
+\begin{align}
+	p(70) =& 0.8: \text{(Chance a man lives at least 70 years)} \nonumber \\
+	p(80) =& 0.5: \text{(Chance a man lives at least 80 years)} \nonumber
+\end{align}
+
+Calculation of $p(80|70)$:
+\begin{align}
+	p(70|80) =& 1 \text{ (No man can live 80 years if he died before living 70 years.)} \nonumber \\
+	p(80|70) =& \frac{p(70|80)\cdot p(80)}{p(70)} = \frac{1\cdot 0.5}{0.8} = 0.625 \nonumber
+\end{align}
+
+
+Solution: The conditional probability that a man lives at least 80 years given that he has just celebrated his 70th birthday is at 62.5\%.
