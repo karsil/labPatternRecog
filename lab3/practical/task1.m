@@ -1,0 +1,1 @@
+# Pattern Recognition - Laboratory# Petersen, Engelmann, Steeg# Exercise L-3.1#iris(1:5, 1, 3)# should result in:# ans = # 6.3000# 5.8000# 7.1000# 6.3000# 6.5000
