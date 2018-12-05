@@ -1,0 +1,37 @@
+\documentclass[]{scrartcl}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% define your personal data here
+\newcommand{\mycourse}{Pattern Recognition (2018)}
+\newcommand{\myprof}{Prof. Dr. Hauke Schramm}
+\newcommand{\myassignementnumber}{3}
+\newcommand{\myduedate}{December 7, 2018}
+\newcommand{\myname}{Engelmann, Petersen, Steeg}
+% end of your personal data
+
+% header
+\rhead{\myname\ | \mycourse\ | theoretical exercise \#\myassignementnumber}
+
+%opening
+\title{\mycourse}
+\subtitle{\myprof}
+\author{Marc Engelmann\\Lasse B. Petersen\\Jan N. Steeg}
+\date{due on \myduedate}
+\subject{theoretical exercise \myassignementnumber}
+
+\begin{document}
+
+\maketitle
+
+\input{files/task1}
+\input{files/task2}
+
+% clearpage can be deleted, it´s here just to demonstrate the header
+\clearpage
+
+\end{document}
