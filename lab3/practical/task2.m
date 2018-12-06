@@ -1,3 +1,6 @@
+clc
+clear all
+
 load("materials/iris_data.mat");
 load("materials/iris_species.mat");
 
@@ -9,7 +12,7 @@ iris2=cat(3,firstFifty,secondFifty,thirdFifty);
 
 iris1=cell(51,5,3);
 for i=2:51
-  iris1(i,1,:)=strcat("obs",int2str(i));
+  iris1(i,1,:)=strcat("obs",int2str(i-1));
 end
 iris1(1,1,1) = "setosa";
 iris1(1,1,2) = "versicolor";
