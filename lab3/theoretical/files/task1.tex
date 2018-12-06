@@ -1,8 +1,50 @@
-\section*{Exercise T-2.3: Bayes Rule}
+\section*{Exercise T-3.3: Bayes Rule}
 
 \subsection*{Problem}
 There are two urns containing colored balls. The first urn contains 50 red balls and 50 blue balls. The second urn contains 30 red balls and 70 blue balls. One of the two urns is randomly chosen (both urns have a probability of 50\% of being chosen) and then a ball is drawn at random from one of the two urns. If a red ball is drawn, what is the probability that it comes from the first urn?
 
 
 \subsection*{Solution}
-An answer.
+Define events:
+\begin{align}
+	U_1 &= \text{First urn}\nonumber \\
+	U_2 &= \text{Second urn}\nonumber \\
+	B_R &= \text{Red ball has been chosen}\nonumber \\
+	B_B &= \text{Blue ball has been chosen}\nonumber
+\end{align}
+Given:
+\begin{align}
+	P(U_1) &= 0.5 \nonumber \\
+	P(U_2) &= 0.5 \nonumber \\
+	P(B_R|U_1) &= 0.5 \nonumber \\
+	P(B_B|U_1) &= 0.5 \nonumber \\
+	P(B_R|U_2) &= 0.3 \nonumber \\
+	P(B_B|U_2) &= 0.7 \nonumber
+\end{align}
+Find:
+\begin{align}
+P(U_1|B_R) \nonumber
+\end{align}
+Calculate the chance to chose a red ball $P(B_R)$:
+\begin{align}
+	P(B_R) &= P(U_1) \cdot P(B_R|U_1) + P(U_2) \cdot P(B_R|U_2)\nonumber\\
+	&= 0.5 \cdot 0.5 + 0.5 \cdot 0.3 \nonumber \\
+	&= 0.25 + 0.15 \nonumber \\
+	&= 0.4 \nonumber 
+\end{align}
+Calculate $P(U_1|B_R)$:
+\begin{align}
+P(U_1|B_R) &= \frac{P(B_R|U_1) \cdot  P(U_1)}{P(B_R)} && \text{(Bayes Rule)} \nonumber \\
+&= \frac{0.5 \cdot 0.5}{0.4} \nonumber \\
+&= 0.625 \nonumber
+\end{align}
+
+
+
+
+
+
+
+
+
+
