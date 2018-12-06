@@ -1,5 +1,10 @@
+# Pattern Recognition - Laboratory
+# Petersen, Engelmann, Steeg
+# Exercise L-3.1
+
 clc
 clear all
+
 task2
 
 function printcell(cell)
@@ -20,4 +25,4 @@ function printcell(cell)
   fprintf("\n");
 end
 
-printcell(iris1)
+%printcell(iris1)
