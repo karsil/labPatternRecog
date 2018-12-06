@@ -8,8 +8,6 @@ firstFifty = [meas(1:50,:)];
 secondFifty =[meas(51:100,:)];
 thirdFifty = [meas(101:150,:)];
 
-iris2=cat(3,firstFifty,secondFifty,thirdFifty);
-
 iris1=cell(51,5,3);
 for i=2:51
   iris1(i,1,:)=strcat("obs",int2str(i-1));
