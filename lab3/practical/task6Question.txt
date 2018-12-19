@@ -1,0 +1,3 @@
+Q: Which data sets can / can not be separated using a linear decision boundary?
+
+A: Datasets without overlapping point clouds can be separated linear.
