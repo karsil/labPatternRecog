@@ -1,8 +1,34 @@
-\section*{Exercise T-2.4: Bayes Rule}
+\section*{Exercise T-3.4: Bayes Rule}
 
 \subsection*{Problem}
 
 An economics consulting firm has created a model to predict recessions. The model predicts a recession with probability 80\% when a recession is indeed coming and with probability 10\% when no recession is coming. The unconditional probability of falling into a recession is 20\%. If the model predicts a recession, what is the probability that a recession will indeed come?
 
 \subsection*{Solution}
-An answer.
+Define events:
+\begin{align}
+	R &= \text{Recession coming}\nonumber \\
+	P &= \text{Predicted recession}\nonumber
+\end{align}
+Given:
+\begin{align}
+	P(P|R) &= 0.8 \nonumber \\
+	P(P|\sim R) &= 0.8 \nonumber \\
+	P(R) &= 0.2 \nonumber
+\end{align}
+Find:
+\begin{align}
+	P(R|P) &= 0.8 \nonumber
+\end{align}
+Calculate the probability for a prediction $P(P)$:
+\begin{align}
+	P(P) &= 0.2 \cdot 0.8 + 0.8 \cdot 0.1 \nonumber \\
+	&= 0.16 + 0.008 \nonumber \\
+	&= 0.24 \nonumber 
+\end{align}
+Calculate $P(R|P)$:
+\begin{align}
+	P(R|P)) &= \frac{P(P|R) \cdot  P(R)}{P(P)} && \text{(Bayes Rule)} \nonumber \\
+	&= \frac{0.8 \cdot 0.2}{0.24} \nonumber \\
+	&= \frac{2}{3} \nonumber
+\end{align}
