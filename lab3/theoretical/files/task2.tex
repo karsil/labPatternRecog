@@ -22,13 +22,14 @@ Find:
 \end{align}
 Calculate the probability for a prediction $P(P)$:
 \begin{align}
-	P(P) &= 0.2 \cdot 0.8 + 0.8 \cdot 0.1 \nonumber \\
-	&= 0.16 + 0.008 \nonumber \\
+	P(P) &= P(R) \cdot P(P|R) + \sim P(R) \cdot P(R|\sim R) \nonumber \\
+	&= 0.2 \cdot 0.8 + 0.8 \cdot 0.1 \nonumber \\
+	&= 0.16 + 0.08 \nonumber \\
 	&= 0.24 \nonumber 
 \end{align}
 Calculate $P(R|P)$:
 \begin{align}
-	P(R|P)) &= \frac{P(P|R) \cdot  P(R)}{P(P)} && \text{(Bayes Rule)} \nonumber \\
+	P(R|P) &= \frac{P(P|R) \cdot  P(R)}{P(P)} && \text{(Bayes Rule)} \nonumber \\
 	&= \frac{0.8 \cdot 0.2}{0.24} \nonumber \\
 	&= \frac{2}{3} \nonumber
 \end{align}
