@@ -66,7 +66,3 @@ hold off;
 
 figure(1)
 surf(Class1_Sensor1,Class0_Sensor1,"bo",Class1_Sensor2,Class0_Sensor2,"r*")
-
-
-
-
