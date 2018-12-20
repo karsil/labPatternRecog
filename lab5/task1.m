@@ -2,9 +2,9 @@
 # Petersen, Engelmann, Steeg
 # Exercise L-5.1
 
+clc
+clear all
 
-load("materials/patterns.txt"); # patterns
-load("materials/targets.txt"); # targets
 load("materials/twoClasses.mat");
 
 # Part 0, Introduction
@@ -16,12 +16,14 @@ load("materials/twoClasses.mat");
 #    3.6642    4.9162    3.9818    5.3453    2.5478
 #   20.0939   15.3323   16.6113   15.4816   18.4773
 
-# Show the first 5 class labels of class ω1 >> targets(2001:2005)
+patterns(:,1:5)
+
+# Show the first 5 class labels of class ω1
+# targets(2001:2005)
 # ans =
 #   11111
 
-
-
+targets(2001:2005)
 
 ### Part a
 # organize the data in a cell array with appropriate labeling of the
