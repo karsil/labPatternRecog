@@ -41,15 +41,22 @@ targets(2001:2005)
 # Solution
 
 offset = 2000
-offsetDev = 3
-cloud1 = zeros(2,2, offsetDev)
+offsetDev = 5
+cloud1 = cell(offsetDev,2,2)
 
-# for i = 1:length(targets)
-for i = 1:offsetDev # 5 for development
-  new = [patterns(:,i) patterns(:,i+offset)]
-  cloud1(:,:,i) = new # WIP not correct order in matrix
+
+for i = 1:offsetDev # for development
+  new = [patterns(:,i) patterns(:,i+offset)] # create 2x2 array
+  cloud1(i,:) = new
   size(cloud1)
 end
+
+# example
+# should return 
+# ans = Sensor1
+# ans =  3.6642
+# ans =  4.9162
+cloud1(1:3, 2, 1)
 
 ### Part b
 
