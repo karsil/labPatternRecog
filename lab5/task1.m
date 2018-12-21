@@ -64,5 +64,7 @@ hold off;
 
 %c
 
-figure(1)
-surf(Class1_Sensor1,Class0_Sensor1,"bo",Class1_Sensor2,Class0_Sensor2,"r*")
+figure(2)
+surf(pts,pts,px1px3+px2px4)
+xlabel('xlabel');
+ylabel('ylabel');
