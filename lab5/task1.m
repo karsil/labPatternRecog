@@ -50,6 +50,7 @@ px3 = exp(-0.5*((pts-m1_1)./s3).^2)./(sqrt(2*pi)*s3);
 px4 = exp(-0.5*((pts-m1_2)./s4).^2)./(sqrt(2*pi)*s4);
 px1px3=px1'*px3;
 px2px4=px2'*px4;
+p_x=px1px3+px2px4;
 
 
 %b
@@ -64,7 +65,12 @@ hold off;
 
 %c
 
+C1=0.4*double(px1px3>px2px4);
+C2=0.6*double(px2px4>px1px3);
+C=C1+C2;
 figure(2)
-surf(pts,pts,px1px3+px2px4)
-xlabel('xlabel');
-ylabel('ylabel');
+surf(pts,pts,px1px3+px2px4,C)
+view(60,33);
+%xlabel('xlabel');
+%ylabel('ylabel');
+
