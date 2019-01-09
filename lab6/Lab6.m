@@ -54,3 +54,27 @@ classified = reshape(result, 112, 92);
 figure(1), imshow(classified);
 pause(0.1);
 end
+
+p1 = size(faceFeats,2)/(size(faceFeats,2)+size(nonFaceFeats,2));
+p2 = size(nonFaceFeats,2)/(size(faceFeats,2)+size(nonFaceFeats,2));
+
+
+
+load 'test_images.mat'
+%bayes classifier
+for i = 1:size(test_images,1)
+  I = test_images(i,:);
+  I = reshape(I, [112,92]);
+  B = im2col(padarray(I, [1, 1], 0, 'both'), [3, 3], 'sliding');
+  
+p_x_1 = mvnpdf(double(B'), meanFaces, covFaces);
+p_x_2 = mvnpdf(double(B'), meanNonFaces, covNonFaces);
+
+p_x_1_p_1= p_x_1 *p1;
+p_x_2_p_2= p_x_2 *p2;
+result = p_x_1_p_1 > p_x_2_p_2;
+
+classified = reshape(result, 112, 92);
+figure(1), imshow(classified);
+pause(0.1);
+end
