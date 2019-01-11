@@ -44,10 +44,10 @@ s2=sqrt(var0_2);
 s3=sqrt(var1_1);
 s4=sqrt(var1_2);
 pts=-2:0.1:25;
-px1 = exp(-0.5*((pts-m0_1)./s1).^2)./(sqrt(2*pi)*s1);
-px2 = exp(-0.5*((pts-m0_2)./s2).^2)./(sqrt(2*pi)*s2);
-px3 = exp(-0.5*((pts-m1_1)./s3).^2)./(sqrt(2*pi)*s3);
-px4 = exp(-0.5*((pts-m1_2)./s4).^2)./(sqrt(2*pi)*s4);
+px1 = exp(-0.5*((pts-m0_1)./s1).^2)./(sqrt(2*pi)*s1);%0y
+px2 = exp(-0.5*((pts-m0_2)./s2).^2)./(sqrt(2*pi)*s2);%1y
+px3 = exp(-0.5*((pts-m1_1)./s3).^2)./(sqrt(2*pi)*s3);%0x
+px4 = exp(-0.5*((pts-m1_2)./s4).^2)./(sqrt(2*pi)*s4);%1x
 px1px3=px1'*px3;
 px2px4=px2'*px4;
 p_x=px1px3+px2px4;
@@ -73,4 +73,6 @@ surf(pts,pts,p_x,C)
 view(60,33);
 xlabel('Sensor1');
 ylabel('Sensor2');
+
+
 
