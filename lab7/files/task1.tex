@@ -1,10 +1,13 @@
-\section*{Exercise T-3.1}
-Consider a two-category classification problem and show that - in a
-specific case - the decision boundary for a MAP classifier is given by setting the log-likelihood ratio to zero. What is the special condition required in that case?
+\section*{Exercise T-7.1}
 
-\subsection*{Solution:}
-As of the formula for $g(x)$:
+\subsection*{Problem}
+You are given the exponential distribution\\
 \begin{align}
-	g(x)=ln\frac{P(x|\omega_1)}{P(x|\omega_2)}+ln\frac{P(\omega_1)}{P(\omega_2)}
+fx (x|\Theta) = fX (x|\lambda) = \lambda_e^{−\lambda_x} \nonumber
 \end{align}
-The log-likelihood-ratio can be 0 when the ratio of the two possibilities is 1. This is only the case, when $P(\omega_1)=P(\omega_2)$.
+defined for $x > 0$ and $\lambda > 0$. Mathematically determine the Maximum-likelihood solution for parameter $\lambda$ if you are given a set of training samples $D = x1 , x2 , ..., xn $
+
+\subsection*{Solution}
+\begin{align}
+L(\overrightarrow{x},\lambda) = \prod_{i=1}^{n}f(x_i | \lambda)=\prod_{i=1}^{n}\lambda e^{-\lambda x_i}=\lambda^n e^{-\lambda \sum_{i=1}^{n} x_i}
+\end{align}
