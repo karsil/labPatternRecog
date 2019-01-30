@@ -3,19 +3,20 @@
 \subsection*{Problem}
 You are given the exponential distribution\\
 \begin{align}
-fx (x|\Theta) = fX (x|\lambda) = \lambda_e^{−\lambda_x} \nonumber
+f_X (x|\Theta) = f_X (x|\lambda) = \lambda e^{- \lambda x} \nonumber
 \end{align}
-defined for $x > 0$ and $\lambda > 0$. Mathematically determine the Maximum-likelihood solution for parameter $\lambda$ if you are given a set of training samples $D = x1 , x2 , ..., xn $
+defined for $x > 0$ and $\lambda > 0$. Mathematically determine the Maximum-likelihood solution for parameter $\lambda$ if you are given a set of training samples $D = x_1 , x_2 , ..., x_n $.
 
 \subsection*{Solution}
+\textbf{Likelihood function:}
 \begin{align}
-L(\overrightarrow{x},\lambda) = \prod_{i=1}^{n}f(x_i | \lambda)=\prod_{i=1}^{n}\lambda e^{-\lambda x_i}=\lambda^n e^{-\lambda \sum_{i=1}^{n} x_i}
+L(\overrightarrow{x},\lambda) = \prod_{i=1}^{n}f_X(x_i | \lambda)=\prod_{i=1}^{n}\lambda e^{-\lambda x_i}=\lambda^n e^{-\lambda \sum_{i=1}^{n} x_i}\nonumber
 \end{align}
-log-likelihood function:
+\textbf{Log-likelihood function:}
 \begin{align}
-l(\overrightarrow{x},\lambda)=ln(L(\overrightarrow{x},\lambda))=nln(\lambda)-\lambda \sum_{i=1}^{n}x_i
+l(\overrightarrow{x},\lambda)=\ln L(\overrightarrow{x},\lambda) = n \ln(\lambda)-\lambda \sum_{i=1}^{n}x_i\nonumber
 \end{align}
-derivative of l
+\textbf{Derivative of $l$:}
 \begin{align}
-\frac{\sigma}{\sigma\lambda}l(\overrightarrow{x},\lambda)=\frac{n}{\lambda}-\sum_{i=1}^{n}x_i\ne 0 \Rightarrow \hat{\lambda}=\frac{n}{\sum_{i=1}^{n}}x_i
+\frac{\partial}{\partial\lambda}l(\overrightarrow{x},\lambda)=\frac{n}{\lambda}-\sum_{i=1}^{n}x_i\ne 0 \Longrightarrow \hat{\lambda}=\frac{n}{\sum_{i=1}^{n}x_i} \nonumber
 \end{align}
