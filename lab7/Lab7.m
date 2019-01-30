@@ -1,6 +1,6 @@
 # Pattern Recognition - Laboratory
 # Petersen, Engelmann, Steeg
-# Exercise L-5.1
+# Exercise L-7.1
 
 means=1:1:50;
 vars=0.1:0.1:5;
@@ -17,7 +17,7 @@ x = min(results):0.1:max(results);
 figure(1)
 hist(results);
 xlabel("values");
-ylabel("likelihood");
+ylabel("likelihood")T;
 figure(2)
 plot(exponentialFunctionValues);
 title("ExponentialFunction");
