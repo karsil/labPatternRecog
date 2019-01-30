@@ -17,7 +17,7 @@ x = min(results):0.1:max(results);
 figure(1)
 hist(results);
 xlabel("values");
-ylabel("likelihood")T;
+ylabel("likelihood");
 figure(2)
 plot(exponentialFunctionValues);
 title("ExponentialFunction");
