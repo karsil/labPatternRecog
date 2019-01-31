@@ -1,0 +1,22 @@
+\section*{Exercise T-7.1}
+
+\subsection*{Problem}
+You are given the exponential distribution\\
+\begin{align}
+f_X (x|\Theta) = f_X (x|\lambda) = \lambda e^{- \lambda x} \nonumber
+\end{align}
+defined for $x > 0$ and $\lambda > 0$. Mathematically determine the Maximum-likelihood solution for parameter $\lambda$ if you are given a set of training samples $D = x_1 , x_2 , ..., x_n $.
+
+\subsection*{Solution}
+\textbf{Likelihood function:}
+\begin{align}
+L(\overrightarrow{x},\lambda) = \prod_{i=1}^{n}f_X(x_i | \lambda)=\prod_{i=1}^{n}\lambda e^{-\lambda x_i}=\lambda^n e^{-\lambda \sum_{i=1}^{n} x_i}\nonumber
+\end{align}
+\textbf{Log-likelihood function:}
+\begin{align}
+l(\overrightarrow{x},\lambda)=\ln L(\overrightarrow{x},\lambda) = n \ln(\lambda)-\lambda \sum_{i=1}^{n}x_i\nonumber
+\end{align}
+\textbf{Derivative of $l$:}
+\begin{align}
+\frac{\partial}{\partial\lambda}l(\overrightarrow{x},\lambda)=\frac{n}{\lambda}-\sum_{i=1}^{n}x_i\ne 0 \Longrightarrow \hat{\lambda}=\frac{n}{\sum_{i=1}^{n}x_i} \nonumber
+\end{align}
