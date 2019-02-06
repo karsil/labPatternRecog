@@ -1,0 +1,19 @@
+\section*{Exercise T-8.1: MAP parameter estimation}
+
+\subsection*{Problem}
+In this exercise, we consider an image region with constant but unknown gray value $c$.
+This constant $c$ is assumed to be a normally distributed random variable with zero mean and variance $\sigma_c^2$.\\
+
+The region is observed by a sensor in the presence of Gaussian noise $e$, which has zero mean and variance $\sigma_c^2$.
+These\textit{ n measured} pixel intensities, which constitute the training corpus, are given by
+\begin{align*}
+	\{x_k\quad |\quad x_k = c + e_k,\quad k = 1,...,n\}
+\end{align*}
+
+Use MAP parameter estimation to determine the constant gray value $\hat{c}$ of the noisy image region.
+Compare your result \textbf{theoretically and practically} (Octave experiments) with the Maximum-likelihood solution and discuss the differences.
+Which influence does the number of training samples have?\\
+
+\textbf{Hint}: The mean of the a-posteriori distribution $p(x_k|c)$ is c since the random variable $e$ has the mean 0.
+
+\subsection*{Solution}
