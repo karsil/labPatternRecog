@@ -1,3 +1,7 @@
+# Pattern Recognition - Laboratory
+# Petersen, Engelmann, Steeg
+# Exercise L-8.1
+
 %pkg install -forge statistics
 
 c=10;
