@@ -18,6 +18,8 @@ Which influence does the number of training samples have?\\
 
 \subsection*{Solution}
 \begin{align*}
- p(c) = \frac{p(c)\cdot P(c+e|c)}{P(e)}\Rightarrow\log(p(c))+\log(p(c+e|e))
+ p(c|c+e) = \frac{p(c)\cdot P(c+e|c)}{P(e)}\Rightarrow\log(p(c))+\log(p(c+e|e))
 \end{align*}
-The probability of $e$ is ignored as it is a constant.
+The probability of $e$ can be ignored as it is a constant.
+
+\includegraphics[width=1\linewidth]{curves}
