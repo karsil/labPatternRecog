@@ -18,10 +18,17 @@ Which influence does the number of training samples have?\\
 
 \subsection*{Solution}
 \begin{align*}
- p(c|c+e) = \frac{p(c)\cdot P(c+e|c)}{P(e)}\Rightarrow\log(p(c))+\log(p(c+e|e))
+	% p(c|c+e) = \frac{p(c)\cdot P(c+e|c)}{P(e)}\Rightarrow\log(p(c))+\log(p(c+e|e))
+	&p(c)_{MAP}=\arg\max_c(p(c)\cdot\prod_{i=1}^{k} p(c+e|c))\\
+	&\Rightarrow\arg\max_c \log p(c)+\sum_{i=1}^{k}p(c+e_i|c)\\
+	&\Rightarrow\arg\max_c \log p(c)+\sum_{i=1}^{k}c+p(e_i)
 \end{align*}
-The probability of $e$ can be ignored as it is a constant.
-
+%The probability of $e$ can be ignored as it is a constant.
+With k getting very large, it gets irrelevant and can be ignored.
+\begin{align*}
+	&\arg\max_c\sum_{i=1}^{k}c+p(e_i)\\
+	&p(e)=\frac{1}{\sqrt{2\pi\sigma}}\cdot\exp-\frac{1}{2}(\frac{e_i-\mu}{\sigma})^2
+\end{align*}
 
 \begin{figure}[t]
 	\includegraphics[width=1\linewidth]{files/curves}
