@@ -17,3 +17,7 @@ Which influence does the number of training samples have?\\
 \textbf{Hint}: The mean of the a-posteriori distribution $p(x_k|c)$ is c since the random variable $e$ has the mean 0.
 
 \subsection*{Solution}
+\begin{align*}
+ p(c) = \frac{p(c)\cdot P(c+e|c)}{P(e)}\Rightarrow\log(p(c))+\log(p(c+e|e))
+\end{align*}
+The probability of $e$ is ignored as it is a constant.
